@@ -1,0 +1,22 @@
+# Coletar dados de quantidade de venda durante 2022 e 2023:
+vendas_2022 = float(input("Informe a quantidade de vendas durante 2022: "))
+vendas_2023 = float(input("Informe a quantidade de vendas durante 2023: "))
+
+# Calcular variação:
+variacao_perc = 100*(vendas_2023 - vendas_2022)/vendas_2022 # Multiplicar por 100, assim vira %.
+
+
+# Sugestões para a diretoria:
+if variacao_perc > 20:
+    print("Bonificação para o time de vendas!")
+
+elif 2 < variacao_perc <= 20:
+    print("Pequena bonificação para time de vendas!")
+
+elif -10 < variacao_perc <= 2:
+    print("Planejamento de políticas de incentivo às vendas.")
+    # colocar <= 2 aqui ao invés de 2 <= no elif acima é interpretação.
+    # A questão não informou qual das respostas à diretoria devemos considerar 2% como parte de seus valores. Em bonificação e em planejamento de  incentivo, ambos podem envolver 2. Na resolução do professor, ele preferiu considerar 2 para pequena bonificação, usando 2 <=...
+
+else:
+    print("Corte de gastos.")
